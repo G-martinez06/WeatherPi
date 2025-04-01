@@ -12,7 +12,7 @@
 
 import os
 import time
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 from TM1637 import FourDigit
         
 
