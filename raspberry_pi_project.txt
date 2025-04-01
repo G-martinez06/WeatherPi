@@ -1,0 +1,75 @@
+RPI PROJECT
+
+PROJECT: Weather Report System and Digital Clock
+	Goal ==> Create a Weather Report System and Digital Clock with a GUI 
+
+
+GENERAL IDEAS AND OUTLINE
+	> have GUI run on startup so that's the only thing that the user sees
+		. Tkinter
+		. guizero
+	
+	> have it compare real / local weather being reported to the info collected
+		. PyOWM [Python OpenWeatherMap]
+		. python-weather
+
+	> little image to correspond with weather [sunny - sun, cloudy - cloud, raining - raincloud]
+	> coding will probably be in Python
+
+
+	For Weather Report System ==> DHT11 Sensor
+		+ Temperature Sensor
+		+ Humidity Sensor
+
+	For Digital Clock ==> TM1637 4 digit display
+		+ Outputs 4 Digits onto Display
+
+|---------------------------------|
+| Pi Info			  |
+|	Username: pi		  |
+|	Password: pi		  |
+|				  |
+|	IP Address: 192.168.1.243 |
+|				  |
+|to SSH:   ssh pi@192.168.1.243	  |
+|				  |
+|to FTP:   use port 22		  |
+|---------------------------------|
+
+
+TO-DO
+	< divide up work
+	< circuiting and wiring
+		. figure out needed hardware from Reyes [can just use mine i guess]
+	< code basic input / output of modules
+	< code GUI to present collected data
+	< write presentation
+
+
+
+DONE
+	1. set up raspberry pi (VNC, SSH, FTP)
+	2. download DHT library ("sudo pip3 install Adafruit_DHT" in  terminal)
+
+
+RESOURCES
+
+	For Weather Report System:
+		Raspberry Pi DHT11 DHT22 Temperature and Humidity Sensor ---> https://www.youtube.com/watch?v=GsG1OClojOk 
+		Using the DHT11 Temperature Sensor with the Raspberry Pi ---> https://www.thegeekpub.com/236867/using-the-dht11-temperature-sensor-with-the-raspberry-pi/
+		Sensor WikiDHT11 Combination Temperature/Humidity Sensor ---> https://www.thegeekpub.com/wiki/sensor-wiki-ky-015-dht11-combination-temperature-and-humidity-sensor/
+
+	For Digital Clock: 
+		Raspberry Pi Amateur Radio Digital Clock ---> https://www.instructables.com/Raspberry-Pi-Amateur-Radio-Digital-Clock/
+		RaspiDigiHamClock [GitHub] ---> https://github.com/rgrokett/RaspiDigiHamClock
+		TM1647 Library ---> https://github.com/timwaizenegger/raspberrypi-examples/tree/master/actor-led-7segment-4numbers
+
+	For GUI: 
+		Starting Python GUI Program on Raspberry pi Startup ---> https://medium.com/@arslion/starting-python-gui-program-on-raspberry-pi-startup-56fb4e451cc1 
+		Run GUI app without desktop ---> https://forums.raspberrypi.com/viewtopic.php?t=319225
+		Getting Started w/ GUIs [guizero] ---> https://projects.raspberrypi.org/en/projects/getting-started-with-guis/0
+		guizero Library ---> https://lawsie.github.io/guizero/widgetoverview/
+
+	For Pi IP Address: 
+		https://forums.raspberrypi.com/viewtopic.php?t=78171
+		https://help.zoho.com/portal/en/kb/iot/zoho-iot-recipes/setting-up-the-raspberry-pi/articles/remote-access-of-a-raspberry-pi-terminal
