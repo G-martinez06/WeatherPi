@@ -210,7 +210,7 @@ class FourDigit:
         for c in text:
             if ord(c) < 32 or ord(c) > 127:
                 c = " "
-            data.append(ord(PATTERN[ord(c) - 32]) + msb)
+            data.append(ord(chr(PATTERN[ord(c) - 32])) + msb)
         return data
 
     def _start(self):
