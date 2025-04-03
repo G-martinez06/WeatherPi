@@ -1,1 +1,24 @@
+# IMPORTS
+import os
+import PRi.GPIO as GPIO
+import time
+from configparser import SafeConfigParser
+from TM1637 import FourDigit
 
+DHTSensor = Adafruit_DHT.DHT11
+
+GPIO_pin = 23
+
+DEBUG = 0
+NUM_MODS = 1
+
+tmz = []
+mil = []
+
+d = []
+c = []
+
+disp = []
+
+while True:
+  # LOOP EVERYTHING
