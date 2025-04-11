@@ -47,7 +47,7 @@ def updater():
     current = time.strftime("%H:%M:%S")
     seconds.append(current)
 
-    humidity = random.uniform(30, 70)  #replace with real humidity value
+    humidity, temper = Adafruit_DHT.read_retry(DHTSensor, GPIO_Pin)
     humidityVal.append(humidity)
 
     #GRAPH DRAWING
