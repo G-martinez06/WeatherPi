@@ -2,6 +2,15 @@ import tkinter as tk
 from tkinter import ttk
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import RPi.GPIO as GPIO
+import Adafruit_DHT
+import time
+ 
+# Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
+DHTSensor = Adafruit_DHT.DHT11
+ 
+# The pin which is connected with the sensor will be declared here
+GPIO_Pin = 23
 
 from collections import deque #for managing list size
 
